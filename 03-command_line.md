@@ -38,9 +38,9 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 11. grep file *.txt
 12. apropos copy; apropos remove; etc.
 13. Environment:
-   export TESTING="1 2 3"
-   echo $TESTING; echo $USER; echo $PWD
-   env -- what's in your environment: env | grep TESTING
+   export TESTING="1 2 3"   
+   echo $TESTING; echo $USER; echo $PWD   
+   env -- what's in your environment: env | grep TESTING   
    unset TESTING
 
 Bash Cheat Sheet
@@ -68,13 +68,13 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 7 of your favorites:
 
-`ls -c` :	Displays files by file timestamp.
-`ls -d` : Displays only directories.
-`ls -f` :	Interprets each name as a directory, not a file.
-`ls -m` :	Displays the names as a comma-separated list.
-`ls -r` :	Displays files in reverse order.
-`ls -R`	: Displays subdirectories as well.
-`ls -1`	: Displays each entry on a line.
+`ls -c` :	Displays files by file timestamp.   
+`ls -d` : Displays only directories.   
+`ls -f` :	Interprets each name as a directory, not a file.   
+`ls -m` :	Displays the names as a comma-separated list.   
+`ls -r` :	Displays files in reverse order.   
+`ls -R`	: Displays subdirectories as well.   
+`ls -1`	: Displays each entry on a line.   
 
 ---
 
@@ -82,8 +82,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-xargs - build and execute command lines from standard input
-Example: find /tmp -name core -type f -print0 | xargs -0 /bin/rm -f
+xargs - build and execute command lines from standard input    
+Example: find /tmp -name core -type f -print0 | xargs -0 /bin/rm -f    
 Find files named core in or below the directory /tmp and delete them, processing  filenames  in  such a way that file or directory names containing spaces or newlines are correctly handled.
 
  
