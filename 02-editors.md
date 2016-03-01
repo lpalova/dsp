@@ -59,7 +59,7 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 
 What terminal editor will you use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I will use vim. I've used it before.
 
 --
 
@@ -67,6 +67,10 @@ What terminal editor will you use? How did you make your decision?
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+I'll probably use Spyder. It lookes very similar to RStudio, a user interface for R. 
+It has an editor to write code + has a console to evaluate the code and see results at any time. It also has an object inspector and a variable explorer to see what objects and variables have been defined. 
+Run the code: F5, Run selection: F9
+I use it as it is.
+
 
  
