@@ -69,7 +69,7 @@ What graphical editor will you use? How did you make your decision? What are som
 
 I'll probably use Spyder. It lookes very similar to RStudio, a user interface for R. 
 It has an editor to write code + has a console to evaluate the code and see results at any time. It also has an object inspector and a variable explorer to see what objects and variables have been defined. 
-Run the code: F5, Run selection: F9
+Run the code: F5, Run selection: F9. 
 I use it as it is.
 
 
