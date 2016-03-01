@@ -72,5 +72,6 @@ It has an editor to write code + has a console to evaluate the code and see resu
 Run the code: F5, Run selection: F9. 
 I use it as it is.
 
+I can also use gedit. 
 
  
