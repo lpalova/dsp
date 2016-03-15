@@ -35,20 +35,20 @@ The implementation of a list is either an ArrayList or a LinkedList. The impleme
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 Python supports the creation of anonymous functions (i.e. functions that are not bound to a name) at runtime, using a construct called "lambda". It is often used in conjunction with typical functional concepts like filter(), map() and reduce(). This piece of code shows the difference between a normal function definition ("f") and a lambda function ("g"):   
->>> def f (x): return x**2   
->>> print f(8)    
+def f (x): return x**2   
+print f(8)    
 64    
->>> g = lambda x: x**2    
->>> print g(8)    
+g = lambda x: x**2    
+print g(8)    
 64   
 Note that the lambda definition does not include a "return" statement -- it always contains an expression which is returned. Also note that you can put a lambda definition anywhere a function is expected, and you don't have to assign it to a variable at all.   
 *Examples - filter, map, reduce:*   
->>> foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]      
->>> print filter(lambda x: x % 3 == 0, foo)    
+foo = [2, 18, 9, 22, 17, 24, 8, 12, 27]      
+print filter(lambda x: x % 3 == 0, foo)    
 [18, 9, 24, 12, 27]   
->>> print map(lambda x: x * 2 + 10, foo)    
+print map(lambda x: x * 2 + 10, foo)    
 [14, 46, 28, 54, 44, 58, 26, 34, 64]   
->>> print reduce(lambda x, y: x + y, foo)     
+print reduce(lambda x, y: x + y, foo)     
 139    
 In the first example, filter() calls our lambda function for each element of the list, and returns a new list that contains only those elements for which the function returned "True". In this case, we get a list of all elements that are multiples of 3. The expression x % 3 == 0 computes the remainder of x divided by 3 and compares the result with 0 (which is true if x is evenly divisible by 3).     
 In the second example, map() is used to convert our list. The given function is called for every element in the original list, and a new list is created which contains the return values from our lambda function. In this case, it computes 2 * x + 10 for every element.   
@@ -60,7 +60,7 @@ student_tuples = [
         ('jane', 'B', 12),   
         ('dave', 'B', 10),   
 ]   
->>> sorted(student_tuples, key=lambda student: student[2])   # sort by age    
+sorted(student_tuples, key=lambda student: student[2])   # sort by age    
 [('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]   
 Cited from: https://wiki.python.org/moin/HowTo/Sorting
 
