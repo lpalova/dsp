@@ -19,5 +19,10 @@ diff = date_stop_object - date_start_object
 diff.days 
 
 ####c)  
+from datetime import datetime  
 date_start = '15-Jan-1994'  
 date_stop = '14-Jul-2015'  
+date_start_object = datetime.strptime(date_start, '%d-%b-%Y')    
+date_stop_object = datetime.strptime(date_stop, '%d-%b-%Y')    
+diff = date_stop_object - date_start_object    
+diff.days 
