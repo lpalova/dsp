@@ -18,6 +18,11 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
+    if isinstance( count, int ):
+        if count >= 10:
+            return 'Number of donuts: many'
+        else:
+            return 'Number of donuts: ' + str(count)
     raise NotImplementedError
 
 
