@@ -12,7 +12,10 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Both lists and tuples are sequences of values; e.g. animals_list = ['bat', 'cat', 'rat'], animals_tuple = ('bat', 'cat', 'rat').   
+Lists are mutable, that is, you can change values of a list. For example, animals_list[2] = 'mouse' assigns a new value for the 2nd element of the list. The result is an updated animals_list = ['bat', 'cat', 'mouse'].    
+Tuples are immutable, that is, you cannot change values of a tuple. Assignment animals_tuple[2] = 'mouse' would not work and python would throw an error message, such as: TypeError: 'tuple' object does not support item assignment.   
+Because tuples are immutable, they can be used as keys in dictionaries. Keys in dictionaries must be an immutable type like string, tuple.
 
 ---
 
@@ -20,7 +23,10 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List is an ordered collection of values. Set is an unordered collection of unique elements. Both lists and sets could be viewed as collections of elements. The difference is that a list is an ordered collection (could be accessed via its ith element, animals_list[i]) while a set is an unordered collection (could add or remove elements, but cannot access elements via an index = has no order). That said, the user has precise control over where in the list each element is inserted. For example, animals_list[2] = "mouse". You can add or remove elements in a list or a set:     
+animals_list = ["bat", "cat", "rat"], animals_list.append("mouse"), animals_list.remove("mouse")    
+animals_set = {"bat", "cat", "rat"}, animals_set.add("mouse"), animals_set.remove("mouse")     
+The implementation of a list is typically either an ArrayList or a LinkedList. The implementation of a set is typically either a HashSet or a TreeSet. Therefore finding an element in a set is typically faster than finding an element in a list.
 
 ---
 
