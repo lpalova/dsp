@@ -26,7 +26,10 @@ How are Python lists and sets similar and different? Give examples of using both
 List is an ordered collection of values. Set is an unordered collection of unique elements. Both lists and sets could be viewed as collections of elements. The difference is that a list is an ordered collection (could be accessed via its ith element, animals_list[i]), while a set is an unordered collection (you could add or remove elements, but you cannot access elements via an index = there is no order). That said, the user has precise control over where in the list each element is inserted. For example, animals_list[2] = "mouse". The same is not true for a set. The user can add or remove elements in a list or a set:     
 animals_list = ["bat", "cat", "rat"], animals_list.append("mouse"), animals_list.remove("mouse")    
 animals_set = {"bat", "cat", "rat"}, animals_set.add("mouse"), animals_set.remove("mouse")     
-The implementation of a list is either an ArrayList or a LinkedList. The implementation of an unordered set is either a HashSet or a TreeSet. Therefore finding an element in a set is typically faster than finding an element in a list.
+*Finding an element*:   
+animals_list.index("cat") -- the `index` method returns the lowest index in list where "cat" appears    
+"cat" in animals_set -- tests "cat" for membership in animals_set    
+The implementation of a list is either an ArrayList or a LinkedList. The implementation of an unordered set is either a HashSet or a TreeSet. Finding an element in a set is typically faster than finding an element in a list.
 
 ---
 
