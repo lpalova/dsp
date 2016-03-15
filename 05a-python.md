@@ -54,7 +54,7 @@ In the first example, filter() calls our lambda function for each element of the
 In the second example, map() is used to convert our list. The given function is called for every element in the original list, and a new list is created which contains the return values from our lambda function. In this case, it computes x + 10 for every element.   
 Finally, reduce() is somewhat special. The "worker function" for this one must accept two arguments (we've called them x and y here), not just one. The function is called with the first two elements from the list, then with the result of that call and the third element, and so on, until all of the list elements have been handled. This means that our function is called n-1 times if the list contains n elements. The return value of the last call is the result of the reduce() construct. In the above example, it simply adds the arguments, so we get the sum of all elements. (Note: since Python 2.3 there's a built-in function sum()that does the same thing more efficiently.)    
 Cited from: http://www.secnetix.de/olli/Python/lambda_functions.hawk    
-*Example - sorted:*
+*Example - sorted:*    
 student_tuples = [   
         ('john', 'A', 15),   
         ('jane', 'B', 12),   
