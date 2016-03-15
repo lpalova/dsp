@@ -53,6 +53,9 @@ Python 2 (2.7). No good reason.
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
 Run the interpreter. It prints the python version at start up.
+OR
+python --version
+python -V 
 
  
 
