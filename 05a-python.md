@@ -35,7 +35,7 @@ The implementation of a list is either an ArrayList or a LinkedList. The impleme
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
 Python supports the creation of anonymous functions (i.e. functions that are not bound to a name) at runtime, using a construct called "lambda". It is often used in conjunction with typical functional concepts like filter(), map() and reduce(). This piece of code shows the difference between a normal function definition ("f") and a lambda function ("g"):   
-def f (x): return $x**2$  
+def f (x): return $$x**2$$  
 print f(8)    
 64    
 g = lambda x: $x**2$    
