@@ -71,18 +71,18 @@ Cited from: https://wiki.python.org/moin/HowTo/Sorting
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
 Python supports a concept called "list comprehensions". It can be used to construct lists in a very natural, easy way, like a mathematician is used to do:   
-You write the set "numbers_to_50" = {i : i  in {0 ... 50}} in Python using list comprehensions as numbers_to_50 = [i for i in range(51)]. Similarly, evens_to_50 = [i for i in range(51) if i%2 == 0]     
+You write the set "numbers_to_50" = {i : i  in {0 ... 50}} in Python using list comprehensions as numbers_to_50 = [i for i in range(51)]. Similarly, evens_to_50 = [i for i in range(51) if i%2 == 0].     
 *Equivalents with `map` and `filter`:*    
 numbers_to_50 = map(lambda x: x, range(51))   
 evens_to_50 = filter(lambda x: x%2 == 0, range(51))   
-List comprehensions are typically faster than map or filter with a lambda function.   
-*Set comprehensions:*
+List comprehensions are typically faster than map or filter with a lambda function.      
+*Set comprehensions:*    
 evens_to_50_set = {i for i in range(51) if i%2 == 0}    
-*Dictionary comprehensions:*
-d = {i: i%2 for i in range(51)}
-key_list = range(51)
-value_list = ["Even", "Odd"]*25
-value_list.append("Even")
+*Dictionary comprehensions:*    
+d = {i: i%2 for i in range(51)}    
+key_list = range(51)    
+value_list = ["Even", "Odd"]*25    
+value_list.append("Even")    
 d = {key: value for (key, value) in zip(key_list, value_list)}
 
 ---
