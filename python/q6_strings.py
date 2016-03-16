@@ -42,6 +42,12 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
+    if isinstance( s, str ):
+        n = len(s)
+        if n < 2:
+            return ''
+        else:
+            return s[:2] + s[-2:]
     raise NotImplementedError
 
 
