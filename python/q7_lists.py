@@ -63,7 +63,7 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    return sorted( tuples, key = lambda nums: nums[-1] )
 
 
 def remove_adjacent(nums):
@@ -82,7 +82,18 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    if len(nums) <= 1:
+        return nums
+    num = nums[0]
+    i = 1
+    while i < len(nums):
+        while nums[i] == num:
+            nums.pop(i)
+            if i == len(nums):
+                return nums
+        num = nums[i]
+        i += 1
+    return nums
 
 
 def linear_merge(list1, list2):
