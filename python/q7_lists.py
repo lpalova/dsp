@@ -41,7 +41,12 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    xwords = filter( lambda item: item.startswith('x') , words)
+    rwords = filter( lambda item: not item.startswith('x') , words)
+    xwords.sort()
+    rwords.sort()
+    xwords.extend(rwords)
+    return xwords
 
 
 def sort_last(tuples):
