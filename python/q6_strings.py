@@ -111,6 +111,13 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
+    if isinstance( s, str ):
+        if len(s) < 3:
+            return s
+        elif s[-3:] == 'ing':
+            return s + 'ly'
+        else:
+            return s + 'ing'
     raise NotImplementedError
 
 
