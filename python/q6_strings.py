@@ -66,6 +66,14 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
+    if isinstance( s, str ):
+        res = s[0]
+        for i in range(1,len(s)):
+            if s[i] == s[0]:
+                res += '*'
+            else:
+                res += s[i]
+        return res
     raise NotImplementedError
 
 
@@ -84,6 +92,8 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
+    if isinstance( a, str ) and isinstance( b, str):
+        return b[:2] + a[2:] + ' ' + a[:2] + b[2:]
     raise NotImplementedError
 
 
