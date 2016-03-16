@@ -15,7 +15,16 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    if isinstance( words, list ):
+        count = 0 
+        for item in words:
+            if isinstance( item, str ):
+                if len(item) >= 2 and item[0] == item[-1]:
+                    count += 1
+            else:
+                raise TypeError('item in words is not a string')
+        return count
+    raise TypeError('words is not a list')
 
 
 def front_x(words):
