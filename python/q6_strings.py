@@ -164,4 +164,10 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
+    if isinstance( a, str ) and isinstance( b, str):
+        aback = len(a)/2
+        afront = len(a) - aback
+        bback = len(b)/2
+        bfront = len(b) - bback
+        return a[:afront] + b[:bfront] + a[-aback:] + b[-bback:]
     raise NotImplementedError
