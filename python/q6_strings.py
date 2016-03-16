@@ -43,8 +43,7 @@ def both_ends(s):
     'xyyz'
     """
     if isinstance( s, str ):
-        n = len(s)
-        if n < 2:
+        if len(s) < 2:
             return ''
         else:
             return s[:2] + s[-2:]
