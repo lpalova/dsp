@@ -1,5 +1,4 @@
 import csv
-import re
 
 def read_data(myfile):
     dict_list = []
