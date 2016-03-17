@@ -74,8 +74,8 @@ faculty_dict = { 'Ellenberg': [\
 ```
 Print the first 3 key and value pairs of the dictionary:
 
-{'Bellamy': [[' Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu']],
- 'Bilker': [['Ph.D.', 'Professor', 'warren@upenn.edu']],
+{'Bellamy': [[' Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu']],\   
+ 'Bilker': [['Ph.D.', 'Professor', 'warren@upenn.edu']],\  
  'Bryan': [[' PhD', 'Assistant Professor', 'bryanma@upenn.edu']]}
 
 
@@ -92,8 +92,8 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 
 Print the first 3 key and value pairs of the dictionary:
 
-{('Benjamin', 'French'): [' PhD', 'Associate Professor', 'bcfrench@mail.med.upenn.edu'],
- ('Andrea', 'Troxel'): [' ScD', 'Professor', 'atroxel@mail.med.upenn.edu'],
+{('Benjamin', 'French'): [' PhD', 'Associate Professor', 'bcfrench@mail.med.upenn.edu'],\   
+ ('Andrea', 'Troxel'): [' ScD', 'Professor', 'atroxel@mail.med.upenn.edu'],\   
  ('Alisa', 'Stephens'): [' Ph.D.', 'Assistant Professor', 'alisaste@mail.med.upenn.edu']}
 
 
