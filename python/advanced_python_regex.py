@@ -2,12 +2,12 @@ import csv
 import re
 
 def read_data(data):
-    list = []
+    dict_list = []
     with open(data, 'rb') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            list.append(row)
-    return list
+            dict_list.append(row)
+    return dict_list
 
 def freq(dict_list, name, num = 0):
     my_dict = {}
