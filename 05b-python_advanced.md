@@ -100,10 +100,11 @@ Print the first 3 key and value pairs of the dictionary:
 ####Q8.  It looks like the current dictionary is printing by first name.  Sort by last name and print the first 3 key and value pairs.  
 
 {
-('Scarlett', 'Bellamy') : [' Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu'] \   
-('Warren', 'Bilker') : ['Ph.D.', 'Professor', 'warren@upenn.edu'] \   
-('Matthew', 'Bryan') : [' PhD', 'Assistant Professor', 'bryanma@upenn.edu'] \   
+('Scarlett', 'Bellamy') : [' Sc.D.', 'Associate Professor', 'bellamys@mail.med.upenn.edu'] ,\   
+('Warren', 'Bilker') : ['Ph.D.', 'Professor', 'warren@upenn.edu'] ,\   
+('Matthew', 'Bryan') : [' PhD', 'Assistant Professor', 'bryanma@upenn.edu'] ,\   
 }
+
 
 
 
