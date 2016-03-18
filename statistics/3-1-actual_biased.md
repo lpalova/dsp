@@ -37,6 +37,7 @@ biased_pmf = BiasPmf(actual_pmf, label='biased')
 
 Display the actual and biased PMFs using:
 ```
+%matplotlib inline
 import thinkplot
 thinkplot.PrePlot(2)
 thinkplot.Pmfs([actual_pmf, biased_pmf])
