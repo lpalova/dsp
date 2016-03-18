@@ -10,7 +10,7 @@ def read_data(data):
     return dict_list
 
 def freq(dict_list, name, num = 0):
-    my_dict = {}
+    hist = {}
     for d in dict_list:
         if num == 0:
             name_list = d[name].strip().split()
@@ -18,11 +18,8 @@ def freq(dict_list, name, num = 0):
             name_list = [" ".join(d[name].strip().split()[:num])]
         for item in name_list:
             item = re.sub("\.","",item)
-            if item in my_dict:
-                my_dict[item] += 1
-            else:
-                my_dict[item] = 1
-    return my_dict
+            hist[item] = hist.get(item,0)+1
+    return hist
 
 def get_list(dict_list, name):
     my_list = []
