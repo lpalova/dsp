@@ -22,12 +22,14 @@ live = preg[ preg.outcome == 1 ]
 first = live[ live.birthord == 1 ]
 others = live[ live.birthord != 1 ]
 Cohend_wgt = CohenEffectSize(first.totalwgt_lb, others.totalwgt_lb)
-#The difference in means of total weight is -0.089 standard deviations.
-#The mean weight of the firstborn babies is slightly smaller
-#than the mean weight of other (second-, third-, etc. born) babies;
-#first babies are lighter than others, on average.
-#Still, the difference in weights is small, less than 0.1 standard deviations.
 Cohend_lngth = CohenEffectSize(first.prglngth, others.prglngth)
-#The difference in means of pregnancy length is 0.029 standard deviations,
-#which is small. 
 ```
+
+The difference in means of total weight is -0.089 standard deviations.
+The mean weight of the firstborn babies is slightly smaller
+than the mean weight of younger-born babies;
+first babies are lighter than others, on average.
+Still, the difference in weights is small, less than 0.1 standard deviations.   
+The difference in means of pregnancy length is 0.029 standard deviations,
+which is small. 
+
