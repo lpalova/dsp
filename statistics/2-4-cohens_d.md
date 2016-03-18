@@ -23,6 +23,10 @@ first = live[ live.birthord == 1 ]
 others = live[ live.birthord != 1 ]
 Cohend_wgt = CohenEffectSize(first.totalwgt_lb, others.totalwgt_lb)
 Cohend_lngth = CohenEffectSize(first.prglngth, others.prglngth)
+print("Cohen's d for total weight", Cohend_wgt)
+#("Cohen's d for total weight", -0.088672927072602)
+print("Cohen's d for pregnancy length", Cohend_lngth)
+("Cohen's d for pregnancy length", 0.028879044654449883)
 ```
 
 The difference in means of total weight is -0.089 standard deviations.
