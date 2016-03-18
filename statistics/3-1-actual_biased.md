@@ -4,6 +4,7 @@ The following code in Python constructs the actual and biased probability mass f
 variable NUMKDHH (number of children under 18 in a household).
 
 ```
+%matplotlib inline
 import chap01soln
 import thinkstats2
 
@@ -37,7 +38,6 @@ biased_pmf = BiasPmf(actual_pmf, label='biased')
 
 Display the actual and biased PMFs using:
 ```
-%matplotlib inline
 import thinkplot
 thinkplot.PrePlot(2)
 thinkplot.Pmfs([actual_pmf, biased_pmf])
