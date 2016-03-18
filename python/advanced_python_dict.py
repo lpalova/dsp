@@ -11,15 +11,12 @@ def read_data(myfile):
     return dict_list
 
 def dict1( dict_list ):
-    my_dict = {}
+    my_dict = collections.defaultdict(list)
     for d in dict_list:
         last_name = d['name'].strip().split()[-1]
         my_list = [ d[' degree'], " ".join(d[' title'].strip().split()[:-2]),\
                      d[' email'] ]                
-        if last_name in my_dict:
-            my_dict[last_name].append(my_list)
-        else:
-            my_dict[last_name] = [my_list]
+        my_dict[last_name].append(my_list)
     return my_dict
 
 def dict2( dict_list ):
