@@ -77,7 +77,12 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+*[Frequentist probability]* (https://en.wikipedia.org/wiki/Frequentist_probability)
+defines an event's probability as the limit of its relative frequency in a large number of trials. In the frequentist interpretation, probabilities are discussed only when dealing with well-defined random experiments (or random samples). The set of all possible outcomes of a random experiment is called the sample space of the experiment. An event is defined as a particular subset of the sample space to be considered. For any given event, only one of two possibilities may hold: it occurs or it does not. The relative frequency of occurrence of an event, observed in a number of repetitions of the experiment (number of trials), is a measure of the probability of that event. This is the core conception of probability in the frequentist interpretation. As the number of trials approaches infinity, the relative frequency will converge exactly to the true probability.
+
+*[Bayesian probability]* (https://en.wikipedia.org/wiki/Bayesian_probability)
+is a quantity that is assigned to represent a state of knowledge, or a state of belief.
+
 
 ---
 
