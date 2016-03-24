@@ -82,6 +82,8 @@ defines an event's probability as the limit of its relative frequency in a large
 
 [Bayesian probability] (https://en.wikipedia.org/wiki/Bayesian_probability)
 is a quantity that is assigned to represent a state of knowledge, or a state of belief.
+The Bayesian interpretation of probability can be seen as an extension of propositional logic that enables reasoning with hypotheses, i.e., the propositions whose truth or falsity is uncertain. In the Bayesian view, a probability is assigned to a hypothesis, whereas under frequentist inference, a hypothesis is typically tested without being assigned a probability.
+Bayesian probability belongs to the category of evidential probabilities; to evaluate the probability of a hypothesis, the Bayesian probabilist specifies some prior probability, which is then updated to a posterior probability in the light of new, relevant data (evidence). The Bayesian interpretation provides a standard set of procedures and formulae to perform this calculation.
 
 
 ---
