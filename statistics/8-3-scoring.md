@@ -39,20 +39,23 @@ def SimulateManyGames(lam=2, m=100000):
     stderr = RMSE(estimates, lam)
     print('rmse L', stderr)
     print('mean error L', MeanError(estimates, lam))
+    
     pmf = thinkstats2.Pmf(estimates)
-    #thinkplot.Hist(pmf)
-    #thinkplot.Show()
+    thinkplot.Hist(pmf)
+    thinkplot.Show()
+    
     cdf = thinkstats2.Cdf(estimates)
     ci = cdf.Percentile(5), cdf.Percentile(95)
     print('confidence interval', ci)
-    #VertLine(ci[0])
-    #VertLine(ci[1])
+    
+    VertLine(ci[0])
+    VertLine(ci[1])
     # plot the CDF
-    #thinkplot.Cdf(cdf)
-    #thinkplot.Save(root='estimation3',
-    #               xlabel='estimate',
-    #               ylabel='CDF',
-    #               title='Sampling distribution')
+    thinkplot.Cdf(cdf)
+    thinkplot.Save(root='estimation3',
+                   xlabel='estimate',
+                   ylabel='CDF',
+                   title='Sampling distribution')
     return stderr
   
 def main():
@@ -74,10 +77,9 @@ Write another function that simulates many games, stores the estimates of {\tt l
 
 Is this way of making an estimate biased?  Plot the sampling distribution of the estimates and the 90\% confidence interval.  What is the standard error?  What happens to sampling error for increasing values of {\tt lam}?
 
-1) RMSE for this way of estimating lambda is 1.4
-2) The mean error is small and decreases with m, so this estimator
-appears to be unbiased.
-3) As {\tt lam} increases, the standard error increases:
+1) RMSE for this way of estimating lambda is 1.4  
+2) The mean error is small and decreases with m, so this estimator appears to be unbiased.  
+3) As {\tt lam} increases, the standard error increases:  
 {\tt lam} RMSE CI  
 2 1.4 (0,5)  
 3 1.7 (0,6)  
