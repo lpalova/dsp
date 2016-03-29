@@ -16,39 +16,49 @@ from scipy import stats
 from estimation import RMSE, MeanError
 
 def SimulateGame(lam):
-  tottime = 0.0
-  goals = 0
-  while tottime <= 1:
-    #time_between_goals = np.random.exponential(1.0/lam, 1)
-    time_between_goals = random.expovariate(lam)
-    goals += 1
-    tottime += time_between_goals
-  return goals
+    """Simulates a game and returns the estimated goal-scoring rate.
+
+    lam: actual goal scoring rate in goals per game
+    """
+    goals = 0
+    t = 0
+    while True:
+        time_between_goals = random.expovariate(lam)
+        t += time_between_goals
+        if t > 1:
+            break
+        goals += 1
+
+    # estimated goal-scoring rate is the actual number of goals scored
+    L = goals
+    return L
 
 def SimulateManyGames(lam=2, m=100000):
-  estimates = []
-  for j in range(m):
-    goals = SimulateGame(lam)
-    estimates.append(goals)
-  
-  meanerr = MeanError(estimates, lam)
-  print('mean error', meanerr)  
-  stderr = RMSE(estimates, lam)
-  print('standard error', stderr)
-  
-  cdf = thinkstats2.Cdf(estimates)
-  ci = cdf.Percentile(5), cdf.Percentile(95)
-  print('confidence interval', ci)
-  VertLine(ci[0])
-  VertLine(ci[1])
+    estimates = []
+    for i in range(m):
+        L = SimulateGame(lam)
+        estimates.append(L)
+        
+    print('rmse L', RMSE(estimates, lam))
+    print('mean error L', MeanError(estimates, lam))
+    
+    pmf = thinkstats2.Pmf(estimates)
+    thinkplot.Hist(pmf)
+    thinkplot.Show()
+    
+    cdf = thinkstats2.Cdf(estimates)
+    ci = cdf.Percentile(5), cdf.Percentile(95)
+    print('confidence interval', ci)
+    VertLine(ci[0])
+    VertLine(ci[1])
 
-  # plot the CDF
-  thinkplot.Cdf(cdf)
-  thinkplot.Save(root='estimation3',
-                 xlabel='estimate',
-                 ylabel='CDF',
-                 title='Sampling distribution')
-  return stderr
+    # plot the CDF
+    thinkplot.Cdf(cdf)
+    thinkplot.Save(root='estimation3',
+                   xlabel='estimate',
+                   ylabel='CDF',
+                   title='Sampling distribution')
+    return stderr
   
 def main():
   thinkstats2.RandomSeed(17)
@@ -69,5 +79,13 @@ Write a function that takes a goal-scoring rate, {\tt lam}, in goals per game, a
 Write another function that simulates many games, stores the estimates of {\tt lam}, then computes their mean error and RMSE.
 
 Is this way of making an estimate biased?  Plot the sampling distribution of the estimates and the 90\% confidence interval.  What is the standard error?  What happens to sampling error for increasing values of {\tt lam}?
+
+1) RMSE for this way of estimating lambda is 1.4
+
+2) The mean error is small and decreases with m, so this estimator
+appears to be unbiased.
+
+One note: If the time between goals is exponential, the distribution of goals scored in a game is Poisson.
+See https://en.wikipedia.org/wiki/Poisson_distribution
 
 ---
