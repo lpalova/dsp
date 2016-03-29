@@ -73,14 +73,14 @@ In games like hockey and soccer, the time between goals is roughly exponential. 
 
 Write a function that takes a goal-scoring rate, {\tt lam}, in goals per game, and simulates a game by generating the time between goals until the total time exceeds 1 game, then returns the number of goals scored.
 
-Write another function that simulates many games, stores the estimates of $\lambda$ {\tt lam}, then computes their mean error and RMSE.
+Write another function that simulates many games, stores the estimates of *lam*, then computes their mean error and RMSE.
 
-Is this way of making an estimate biased?  Plot the sampling distribution of the estimates and the 90\% confidence interval.  What is the standard error?  What happens to sampling error for increasing values of {\tt lam}?
+Is this way of making an estimate biased?  Plot the sampling distribution of the estimates and the 90\% confidence interval.  What is the standard error?  What happens to sampling error for increasing values of *lam*?
 
 1) RMSE for this way of estimating lambda is 1.4  
 2) The mean error is small and decreases with m, so this estimator appears to be unbiased.  
-3) As {\tt lam} increases, the standard error increases:  
-{\tt lam} RMSE CI  
+3) As *lam* increases, the standard error increases:  
+*lam* RMSE CI  
 2 1.4 (0,5)  
 3 1.7 (0,6)  
 4 2.0 (1,8)  
