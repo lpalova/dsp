@@ -59,4 +59,15 @@ if __name__ == '__main__':
 
 Suppose you draw a sample with size n = 10 from an exponential distribution with λ = 2. Simulate this experiment 1000 times and plot the sampling distribution of the estimate L. Compute the standard error of the estimate and the 90% confidence interval. Repeat the experiment with a few different values of n and make a plot of standard error versus n.
 
+1) With sample size 10:
 
+standard error 0.896717911545
+confidence interval (1.2901330772324622, 3.8692334892427911)
+
+2) As sample size increases, standard error and the width of the CI decrease:
+
+10      0.90    (1.3, 3.9)
+100     0.21    (1.7, 2.4)
+1000    0.06    (1.9, 2.1)
+
+All three confidence intervals contain the actual value, 2.
