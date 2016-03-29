@@ -17,7 +17,6 @@ from estimation import RMSE, MeanError
 
 def SimulateGame(lam):
     """Simulates a game and returns the estimated goal-scoring rate.
-
     lam: actual goal scoring rate in goals per game
     """
     goals = 0
@@ -28,7 +27,6 @@ def SimulateGame(lam):
         if t > 1:
             break
         goals += 1
-
     # estimated goal-scoring rate is the actual number of goals scored
     L = goals
     return L
@@ -38,20 +36,16 @@ def SimulateManyGames(lam=2, m=100000):
     for i in range(m):
         L = SimulateGame(lam)
         estimates.append(L)
-        
     print('rmse L', RMSE(estimates, lam))
     print('mean error L', MeanError(estimates, lam))
-    
     pmf = thinkstats2.Pmf(estimates)
     thinkplot.Hist(pmf)
     thinkplot.Show()
-    
     cdf = thinkstats2.Cdf(estimates)
     ci = cdf.Percentile(5), cdf.Percentile(95)
     print('confidence interval', ci)
     VertLine(ci[0])
     VertLine(ci[1])
-
     # plot the CDF
     thinkplot.Cdf(cdf)
     thinkplot.Save(root='estimation3',
@@ -62,7 +56,6 @@ def SimulateManyGames(lam=2, m=100000):
   
 def main():
   thinkstats2.RandomSeed(17)
-
   for lam in [2, 3, 4]:
       stderr = SimulateManyGames(lam=lam)
       print(lam, stderr)
